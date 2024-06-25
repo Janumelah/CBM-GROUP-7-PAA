@@ -242,7 +242,6 @@ def generate_map(cell_size, map_scale):
 def update_map():
     global canvas_image, canvas_tk, new_map
     new_map = generate_map(cell_size, map_scale)
-    new_map.save("hasil_map.png")
     cropped_map = new_map.crop((viewport_x, viewport_y, viewport_x + viewport_width, viewport_y + viewport_height))
     resized_map = cropped_map.resize((INITIAL_WIDTH, INITIAL_HEIGHT))
     canvas_tk = ImageTk.PhotoImage(resized_map)
